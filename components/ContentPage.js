@@ -91,4 +91,3 @@ const styles = StyleSheet.create({
     color:"#FFF"
   }
 })
-

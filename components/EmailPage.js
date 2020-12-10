@@ -42,13 +42,13 @@ export default class EmailPage extends React.Component{
 
   componentDidMount(){
     this.getMyObject()
-    Animated.timing(this.state.verticalVal, {toValue: 10, duration: 1000, easing: Easing.inOut(Easing.quad)}).start();
+    Animated.timing(this.state.verticalVal, {toValue: 10, duration: 1000,useNativeDriver: true,easing: Easing.inOut(Easing.quad)}).start();
         this.state.verticalVal.addListener(({value}) => {
             if (value == 10) {
-                Animated.timing(this.state.verticalVal, {toValue: 0, duration: 1000, easing: Easing.inOut(Easing.quad)}).start();
+                Animated.timing(this.state.verticalVal, {toValue: 0, duration: 1000, useNativeDriver: true,  easing: Easing.inOut(Easing.quad)}).start();
             }
             else if (value == 0) {
-                Animated.timing(this.state.verticalVal, {toValue: 10, duration: 1000, easing: Easing.inOut(Easing.quad)}).start();
+                Animated.timing(this.state.verticalVal, {toValue: 10, duration: 1000, useNativeDriver: true,  easing: Easing.inOut(Easing.quad)}).start();
             }
         })
   }
